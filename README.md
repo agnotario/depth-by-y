@@ -47,49 +47,47 @@ Paste the following URL into **Extensions** in MakeCode Arcade:
 
 Pega esta URL en **Extensiones** en MakeCode Arcade:
 
-[https://github.com/agnotario/depthByY]
+```
+https://github.com/your-username/depthByY
+```
 
 ---
 
 ## 🧪 Example / Ejemplo
 
-![Demo](docs/demo.gif)
+```ts
+let player = sprites.create(img`...`, SpriteKind.Player)
+let tree = sprites.create(img`...`, SpriteKind.Object)
+player.setPosition(80, 100)
+tree.setPosition(80, 60)
 
-https://arcade.makecode.com/S83706-25127-05552-15528
+depthByY.addSprite(player)
+depthByY.addSpriteWithOffset(tree, 5)
+```
 
 💡 Now the player appears in front of or behind the tree depending on Y.
 
 💡 Ahora el jugador aparece delante o detrás del árbol según su posición Y.
 
-🛠 Advanced use / Uso avanzado
-	•	You can dynamically change zOffset to prioritize layers visually.
-	•	Disabling sorting temporarily lets you freeze sprite order for cutscenes or effects.
-	•	Useful when using tilemaps + sprites that overlap.
+---
 
-Puedes cambiar zOffset en tiempo real para modificar la profundidad visual.
+## 🛠 Advanced use / Uso avanzado
+
+- You can dynamically change `zOffset` to prioritize layers visually.
+- Disabling sorting temporarily lets you freeze sprite order for cutscenes or effects.
+- Useful when using tilemaps + sprites that overlap.
+
+Puedes cambiar `zOffset` en tiempo real para modificar la profundidad visual.  
 Desactiva la ordenación para congelar capas en escenas, combates o efectos especiales.
 
+---
 
-> Open this page at [https://agnotario.github.io/depth-by-y/](https://agnotario.github.io/depth-by-y/)
+## 📜 License
 
-## Use as Extension
+MIT
 
-This repository can be added as an **extension** in MakeCode.
+---
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/agnotario/depth-by-y** and import
+## 🙌 Credits
 
-## Edit this project
-
-To edit this repository in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/agnotario/depth-by-y** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Made with ❤️ using [MakeCode Arcade](https://arcade.makecode.com/)
