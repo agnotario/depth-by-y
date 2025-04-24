@@ -1,0 +1,22 @@
+{
+    "en": {
+        "depthByY": {
+            "Depth By Y": "Depth By Y",
+            "enable depth sorting $active": "enable depth sorting $active",
+            "sort sprite $sprite by Y": "sort sprite $sprite by Y",
+            "sort sprite $sprite by Y with offset $offset": "sort sprite $sprite by Y with offset $offset",
+            "set Z offset of $sprite to $offset": "set Z offset of $sprite to $offset",
+            "clear sorted sprites": "clear sorted sprites"
+        }
+    },
+    "es": {
+        "depthByY": {
+            "Depth By Y": "Profundidad según Y",
+            "enable depth sorting $active": "activar orden por profundidad $active",
+            "sort sprite $sprite by Y": "ordenar sprite $sprite por Y",
+            "sort sprite $sprite by Y with offset $offset": "ordenar sprite $sprite por Y con desplazamiento $offset",
+            "set Z offset of $sprite to $offset": "ajustar desplazamiento Z de $sprite a $offset",
+            "clear sorted sprites": "limpiar sprites ordenados"
+        }
+    }
+}
