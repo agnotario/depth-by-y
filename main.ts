@@ -1,19 +1,24 @@
 //% weight=100 color=#0fbc11 icon="object-group"
-//% block="Profundidad Y"
+//% block="Depth By Y"
 namespace depthByY {
     let spritesToSort: Sprite[] = []
-    let ordenacionActiva = true
+    let zOffsets: { [id: number]: number } = {}
+    let sortingEnabled = true
 
-    //% block="activar ordenación por Y $activa"
-    export function setOrdenacionActiva(activa: boolean) {
-        ordenacionActiva = activa
+    /**
+     * Enable or disable automatic sorting by Y
+     * @param active true to enable sorting, false to disable it
+     */
+    //% block="enable depth sorting $active"
+    export function setSortingEnabled(active: boolean) {
+        sortingEnabled = active
     }
 
     /**
-     * Registra un sprite para ordenarse automáticamente por su posición Y.
-     * @param sprite el sprite a ordenar
+     * Register a sprite to be automatically sorted by its Y position
+     * @param sprite the sprite to include in sorting
      */
-    //% block="ordenar sprite $sprite por Y"
+    //% block="sort sprite $sprite by Y"
     export function addSprite(sprite: Sprite) {
         if (spritesToSort.indexOf(sprite) === -1) {
             spritesToSort.push(sprite)
@@ -21,42 +26,49 @@ namespace depthByY {
     }
 
     /**
-     * Registra un sprite con un offset de profundidad adicional.
-     * @param sprite el sprite a ordenar
-     * @param offset el desplazamiento de profundidad
-     */
-    //% block="ordenar sprite $sprite por Y con offset $offset"
+    * Register a sprite with a custom Z offset for depth sorting
+    * @param sprite the sprite to include
+    * @param offset additional Z offset for fine-tuning
+    */
+    //% block="sort sprite $sprite by Y with offset $offset"
     export function addSpriteWithOffset(sprite: Sprite, offset: number) {
-        sprite.data["zOffset"] = offset
+        if (!sprite || typeof sprite.id !== "number") return
+        zOffsets[sprite.id] = offset
         addSprite(sprite)
     }
 
     /**
-        * Establece o cambia el offset Z de un sprite registrado.
-        * @param sprite el sprite registrado
-        * @param offset el nuevo offset
-        */
-    //% block="establecer offset Z de $sprite a $offset"
+    * Set or update the Z offset for a registered sprite
+    * @param sprite the sprite to update
+    * @param offset new Z offset value
+    */
+    //% block="set Z offset of $sprite to $offset"
     export function setZOffset(sprite: Sprite, offset: number) {
-        sprite.data["zOffset"] = offset
+        if (!sprite || typeof sprite.id !== "number") return
+        zOffsets[sprite.id] = offset
     }
     
     /**
-     * Elimina todos los sprites registrados.
-     */
-    //% block="limpiar sprites ordenados"
+    * Remove all registered sprites from sorting
+    */
+    //% block="clear sorted sprites"
     export function clearSprites() {
         spritesToSort = []
+        zOffsets = {}
     }
 
+    function getZOffset(sprite: Sprite): number {
+        return zOffsets[sprite.id] || 0
+    }
+    
     function compareByY(a: Sprite, b: Sprite): number {
-        const ay = a.y + (a.data["zOffset"] || 0)
-        const by = b.y + (b.data["zOffset"] || 0)
+        const ay = a.y + getZOffset(a)
+        const by = b.y + getZOffset(b)
         return ay - by
     }
 
     game.onUpdate(function () {
-        if (!ordenacionActiva) return
+        if (!sortingEnabled) return
         spritesToSort.sort(compareByY)
         for (let i = 0; i < spritesToSort.length; i++) {
             spritesToSort[i].z = i
