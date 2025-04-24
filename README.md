@@ -48,7 +48,7 @@ Paste the following URL into **Extensions** in MakeCode Arcade:
 Pega esta URL en **Extensiones** en MakeCode Arcade:
 
 ```
-https://github.com/agnotario/depthByY
+[https://github.com/agnotario/depthByY](https://github.com/agnotario/depth-by-y)
 ```
 
 ---
