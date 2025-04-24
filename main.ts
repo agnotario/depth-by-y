@@ -1,4 +1,4 @@
-//% weight=100 color=#0fbc11 icon="object-group"
+//% weight=100 color=#0fbc11 icon="\uf247"
 //% block="Depth By Y"
 namespace depthByY {
     let spritesToSort: Sprite[] = []
