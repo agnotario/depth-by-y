@@ -1,5 +1,5 @@
-//% weight=100 color=#0fbc11 icon="\uf87f"
-//% block="Depth By Y"
+//% weight=100 color=#0fbc11 icon="object-group"
+//% block="Profundidad Y"
 namespace depthByY {
     let spritesToSort: Sprite[] = []
 
@@ -14,10 +14,22 @@ namespace depthByY {
         }
     }
 
+    /**
+     * Elimina todos los sprites registrados.
+     */
+    //% block="limpiar sprites ordenados"
+    export function clearSprites() {
+        spritesToSort = []
+    }
+
+    function compareByY(a: Sprite, b: Sprite): number {
+        return a.y - b.y;
+    }
+
     game.onUpdate(function () {
-        spritesToSort.sort((a, b) => a.y - b.y)
-        spritesToSort.forEach((sprite, index) => {
-            sprite.z = index
-        })
+        spritesToSort.sort(compareByY);
+        for (let i = 0; i < spritesToSort.length; i++) {
+            spritesToSort[i].z = i;
+        }
     })
 }
