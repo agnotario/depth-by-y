@@ -1,5 +1,5 @@
-//% weight=100 color=#0fbc11 icon="clone"
-//% block="profundidad Y"
+//% weight=100 color=#0fbc11 icon="\uf87f"
+//% block="Depth By Y"
 namespace depthByY {
     let spritesToSort: Sprite[] = []
 
