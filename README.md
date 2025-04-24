@@ -1,4 +1,4 @@
-# depthByY
+# DepthByY
 
 Automatically sort sprite layers in MakeCode Arcade based on their Y position to simulate depth in top-down or isometric games.
 
