@@ -9,7 +9,7 @@ namespace depthByY {
      * Enable or disable automatic sorting by Y
      * @param active true to enable sorting, false to disable it
      */
-    //% block="enable depth sorting $active"
+    //% blockId="depthByY_enableSorting" block="enable depth sorting $active"
     export function setSortingEnabled(active: boolean) {
         sortingEnabled = active
     }
