@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.53/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.0.2","target":"arcade","targetVersion":"2.0.53","repo":"agnotario/depth-by-y"}
-// total=1640856 new=29.16% cached=66.56% other=4.29%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v2.0.53/---simulator","cdnUrl":"https://cdn.makecode.com","version":"0.0.3","target":"arcade","targetVersion":"2.0.53","repo":"agnotario/depth-by-y"}
+// total=1640899 new=29.16% cached=66.55% other=4.29%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -428,7 +428,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P17982(s) {
+function _main___P23304(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -827,12 +827,12 @@ switch (step) {
   case 36:
     r0 = s.retval;
     r0 = pxsim_Array__mk();
-    globals.spritesToSort___6878 = (r0);
+    globals.spritesToSort___23161 = (r0);
     r0 = pxsim_pxtrt.mkMap();
-    globals.zOffsets___6881 = (r0);
-    globals.sortingEnabled___6883 = (true);
+    globals.zOffsets___23164 = (r0);
+    globals.sortingEnabled___23166 = (true);
     s.tmp_0 = game_onUpdate__P3057_mk(s);
-    s.tmp_0.arg0 = depthByY_inline__P6961;
+    s.tmp_0.arg0 = depthByY_inline__P23249;
     s.callLocIdx = 69; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
@@ -840,13 +840,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P17982.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P17982.continuations = [  ]
+_main___P23304.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P23304.continuations = [  ]
 
-function _main___P17982_mk(s) {
+function _main___P23304_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P17982, depth: s.depth + 1,
+        parent: s, fn: _main___P23304, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1385,7 +1385,7 @@ function gameOverConfig_inline__P4950_mk(s) {
 
 
 
-function depthByY_inline__P6961(s) {
+function depthByY_inline__P23249(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1395,8 +1395,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.i___6967 = undefined;
-    r0 = pxsim_numops_toBoolDecr(globals.sortingEnabled___6883);
+    s.i___23255 = undefined;
+    r0 = pxsim_numops_toBoolDecr(globals.sortingEnabled___23166);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
@@ -1406,24 +1406,24 @@ switch (step) {
   case 1:
   case 2:
     s.tmp_2 = helpers_arraySort__P105_mk(s);
-    s.tmp_2.arg0 = globals.spritesToSort___6878;
-    s.tmp_2.arg1 = depthByY_compareByY__P6940;
+    s.tmp_2.arg0 = globals.spritesToSort___23161;
+    s.tmp_2.arg1 = depthByY_compareByY__P23228;
     s.callLocIdx = 67; s.pc = 6; return s.tmp_2;
   case 6:
     r0 = s.retval;
-    s.i___6967 = (0);
+    s.i___23255 = (0);
   case 3:
-    s.tmp_1 = r0 = s.i___6967;
-    r0 = pxsim_Array__length(globals.spritesToSort___6878);
+    s.tmp_1 = r0 = s.i___23255;
+    r0 = pxsim_Array__length(globals.spritesToSort___23161);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
     s.tmp_3 = if_z_2_mk(s);
-    r0 = pxsim_Array__getAt(globals.spritesToSort___6878, s.i___6967);
+    r0 = pxsim_Array__getAt(globals.spritesToSort___23161, s.i___23255);
     s.tmp_3.arg0 = r0;
-    s.tmp_3.arg1 = s.i___6967;
+    s.tmp_3.arg1 = s.i___23255;
     if (!s.tmp_3.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_3.arg0, "z", s.tmp_3.arg1);
     } else {
@@ -1434,8 +1434,8 @@ switch (step) {
     }
   case 7:
     r0 = s.retval;
-    r0 = (s.i___6967 + 1);
-    s.i___6967 = (r0);
+    r0 = (s.i___23255 + 1);
+    s.i___23255 = (r0);
     { step = 3; continue; }
   case 4:
   case 5:
@@ -1443,25 +1443,25 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-depthByY_inline__P6961.info = {"start":2108,"length":196,"line":69,"column":18,"endLine":75,"endColumn":5,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+depthByY_inline__P23249.info = {"start":2442,"length":196,"line":75,"column":18,"endLine":81,"endColumn":5,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function depthByY_inline__P6961_mk(s) {
+function depthByY_inline__P23249_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: depthByY_inline__P6961, depth: s.depth + 1,
+        parent: s, fn: depthByY_inline__P23249, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  i___6967: undefined,
+  i___23255: undefined,
 } }
 
 
 
 
 
-function depthByY_compareByY__P6940(s) {
+function depthByY_compareByY__P23228(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1471,8 +1471,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.ay___6943 = undefined;
-    s.by___6950 = undefined;
+    s.ay___23231 = undefined;
+    s.by___23238 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -1484,45 +1484,45 @@ switch (step) {
   case 1:
     r0 = s.retval;
     s.tmp_0 = r0;
-    s.tmp_3 = depthByY_getZOffset__P6933_mk(s);
+    s.tmp_3 = depthByY_getZOffset__P23221_mk(s);
     s.tmp_3.arg0 = s.arg0;
     s.callLocIdx = 64; s.pc = 2; return s.tmp_3;
   case 2:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = (s.tmp_0 + s.tmp_2);
-    s.ay___6943 = (r0);
+    s.ay___23231 = (r0);
     s.tmp_1 = Sprite_y__P2370_mk(s);
     s.tmp_1.arg0 = s.arg1;
     s.callLocIdx = 65; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
     s.tmp_0 = r0;
-    s.tmp_3 = depthByY_getZOffset__P6933_mk(s);
+    s.tmp_3 = depthByY_getZOffset__P23221_mk(s);
     s.tmp_3.arg0 = s.arg1;
     s.callLocIdx = 66; s.pc = 4; return s.tmp_3;
   case 4:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = (s.tmp_0 + s.tmp_2);
-    s.by___6950 = (r0);
-    r0 = (s.ay___6943 - s.by___6950);
+    s.by___23238 = (r0);
+    r0 = (s.ay___23231 - s.by___23238);
     return leave(s, r0)
   default: oops()
 } } }
-depthByY_compareByY__P6940.info = {"start":1930,"length":158,"line":63,"column":4,"endLine":67,"endColumn":5,"fileName":"main.ts","functionName":"compareByY","argumentNames":["a","b"]}
+depthByY_compareByY__P23228.info = {"start":2264,"length":158,"line":69,"column":4,"endLine":73,"endColumn":5,"fileName":"main.ts","functionName":"compareByY","argumentNames":["a","b"]}
 
-function depthByY_compareByY__P6940_mk(s) {
+function depthByY_compareByY__P23228_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: depthByY_compareByY__P6940, depth: s.depth + 1,
+        parent: s, fn: depthByY_compareByY__P23228, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  ay___6943: undefined,
-  by___6950: undefined,
+  ay___23231: undefined,
+  by___23238: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -1531,7 +1531,7 @@ function depthByY_compareByY__P6940_mk(s) {
 
 
 
-function depthByY_getZOffset__P6933(s) {
+function depthByY_getZOffset__P23221(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1547,7 +1547,7 @@ switch (step) {
     }
     r0 = s.arg0.fields["id"];
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.zOffsets___6881, s.tmp_1);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.zOffsets___23164, s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -1562,12 +1562,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-depthByY_getZOffset__P6933.info = {"start":1829,"length":91,"line":59,"column":4,"endLine":61,"endColumn":5,"fileName":"main.ts","functionName":"getZOffset","argumentNames":["sprite"]}
+depthByY_getZOffset__P23221.info = {"start":2163,"length":91,"line":65,"column":4,"endLine":67,"endColumn":5,"fileName":"main.ts","functionName":"getZOffset","argumentNames":["sprite"]}
 
-function depthByY_getZOffset__P6933_mk(s) {
+function depthByY_getZOffset__P23221_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: depthByY_getZOffset__P6933, depth: s.depth + 1,
+        parent: s, fn: depthByY_getZOffset__P23221, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -42260,7 +42260,7 @@ const sprites_BaseSpriteSayRenderer__C2273_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["zOffsets___6881","sortingEnabled___6883","spritesToSort___6878"])
+const breakpoints = setupDebugger(1, ["zOffsets___23164","sortingEnabled___23166","spritesToSort___23161"])
 
-return _main___P17982
+return _main___P23304
 })
