@@ -77,14 +77,15 @@ depthByY.addSpriteWithOffset(tree, 5)
 - Disabling sorting temporarily lets you freeze sprite order for cutscenes or effects.
 - Useful when using tilemaps + sprites that overlap.
 
-Puedes cambiar `zOffset` en tiempo real para modificar la profundidad visual.  
-Desactiva la ordenación para congelar capas en escenas, combates o efectos especiales.
+- Puedes cambiar `zOffset` en tiempo real para modificar la profundidad visual.  
+- Desactiva la ordenación para congelar capas en escenas, combates o efectos especiales.
 
 ---
 
-## 📜 License
+## 📜 **License & Contributions**  
+Released under the **MIT License**, allowing free use and modification. Contributions are welcome—fork the repository and submit a pull request.  
 
-MIT
+For issues or feedback, visit the [[issues]](https://github.com/agnotario/depth-by-y/issues) page.
 
 ---
 
