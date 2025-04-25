@@ -71,15 +71,17 @@ depthByY.addSpriteWithOffset(tree, 5)
 
 ---
 
-## 🛠 Advanced use / Uso avanzado
+## 🛠 Advanced use
 
 - You can dynamically change `zOffset` to prioritize layers visually.
 - Disabling sorting temporarily lets you freeze sprite order for cutscenes or effects.
 - Useful when using tilemaps + sprites that overlap.
 
+## 🛠 Uso avanzado
+
 - Puedes cambiar `zOffset` en tiempo real para modificar la profundidad visual.  
 - Desactiva la ordenación para congelar capas en escenas, combates o efectos especiales.
-
+- Útil cuando se utilizan tilemaps + sprites que se solapan.
 ---
 
 ## 📜 **License & Contributions**  
