@@ -1,5 +1,6 @@
 //% weight=100 color=#0fbc11 icon="\uf247"
 //% block="Depth By Y"
+//% block.loc.es="Profundidad según Y"
 namespace depthByY {
     let spritesToSort: Sprite[] = []
     let zOffsets: { [id: number]: number } = {}
@@ -10,6 +11,7 @@ namespace depthByY {
      * @param active true to enable sorting, false to disable it
      */
     //% block="enable depth sorting $active"
+    //% block.loc.es="activar orden por profundidad $active"
     export function setSortingEnabled(active: boolean) {
         sortingEnabled = active
     }
@@ -19,6 +21,7 @@ namespace depthByY {
      * @param sprite the sprite to include in sorting
      */
     //% block="sort sprite $sprite by Y"
+    //% block.loc.es="ordenar sprite $sprite por Y"
     export function addSprite(sprite: Sprite) {
         if (spritesToSort.indexOf(sprite) === -1) {
             spritesToSort.push(sprite)
@@ -31,6 +34,7 @@ namespace depthByY {
     * @param offset additional Z offset for fine-tuning
     */
     //% block="sort sprite $sprite by Y with offset $offset"
+    //% block.loc.es="ordenar sprite $sprite por Y con $offset"
     export function addSpriteWithOffset(sprite: Sprite, offset: number) {
         if (!sprite || typeof sprite.id !== "number") return
         zOffsets[sprite.id] = offset
@@ -43,6 +47,7 @@ namespace depthByY {
     * @param offset new Z offset value
     */
     //% block="set Z offset of $sprite to $offset"
+    //% block.loc.es="ajustar desplazamiento Z de $sprite a $offset"
     export function setZOffset(sprite: Sprite, offset: number) {
         if (!sprite || typeof sprite.id !== "number") return
         zOffsets[sprite.id] = offset
@@ -52,6 +57,7 @@ namespace depthByY {
     * Remove all registered sprites from sorting
     */
     //% block="clear sorted sprites"
+    //% block.loc.es="limpiar sprites ordenados"
     export function clearSprites() {
         spritesToSort = []
         zOffsets = {}
