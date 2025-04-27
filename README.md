@@ -34,10 +34,15 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 | Block | Description |
 |-------|-------------|
 | `sort sprite [sprite] by Y` | Add a sprite to auto-sorting by Y |
+| `sort sprite [sprite] by bottom` | Add a sprite to auto-sorting calculate its offset based on the bottom of the hitbox |
 | `sort sprite [sprite] by Y with offset [number]` | Add sprite with manual depth offset |
 | `set Z offset of [sprite] to [number]` | Change the Z offset for a sprite |
-| `clear all sorted sprites` | Reset all sorting |
 | `enable depth sorting [true/false]` | Turn sorting on/off |
+| `clear all sorted sprites` | Reset all sorting |
+
+
+#🛠 Tip 
+If your sprites have different sizes or their collision box is not aligned to the center, consider using "sort sprite by bottom" to get the most accurate visual depth.
 
 ---
 
