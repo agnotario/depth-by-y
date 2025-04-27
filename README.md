@@ -42,6 +42,7 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 
 
 🛠 `Tip:` If your sprites have different sizes or their collision box is not aligned to the center, consider using "sort sprite by bottom" to get the most accurate visual depth.
+🛠 'Consejo:' Si tus sprites tienen tamaños diferentes o su caja de colisiones no está alineada al centro, considera usar "ordenar sprite por su base" para lograr una profundidad visual más precisa.
 
 ---
 
