@@ -28,6 +28,7 @@ namespace depthByY {
         }
     }
 
+    
     /**
     * Register a sprite with a custom Z offset for depth sorting
     * @param sprite the sprite to include
@@ -39,6 +40,18 @@ namespace depthByY {
         if (!sprite || typeof sprite.id !== "number") return
         zOffsets[sprite.id] = offset
         addSprite(sprite)
+    }
+    
+    /**
+        * Register a sprite and automatically calculate its offset based on the bottom of the hitbox
+        * @param sprite the sprite to sort
+        */
+    //% block="sort sprite $sprite by bottom"
+    //% block.loc.es="ordenar sprite $sprite por su base"
+    export function addSpriteByBottom(sprite: Sprite) {
+        if (!sprite) return
+        let offset = sprite.bottom - sprite.y
+        addSpriteWithOffset(sprite, offset)
     }
 
     /**
