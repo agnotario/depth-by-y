@@ -10,6 +10,7 @@ namespace depthByY {
      * Enable or disable automatic sorting by Y
      * @param active true to enable sorting, false to disable it
      */
+    //% weight = 60
     //% block="enable depth sorting $active"
     //% block.loc.es="activar orden por profundidad $active"
     export function setSortingEnabled(active: boolean) {
@@ -20,6 +21,7 @@ namespace depthByY {
      * Register a sprite to be automatically sorted by its Y position
      * @param sprite the sprite to include in sorting
      */
+    //% weight = 100
     //% block="sort sprite $sprite by Y"
     //% block.loc.es="ordenar sprite $sprite por Y"
     export function addSprite(sprite: Sprite) {
@@ -34,6 +36,7 @@ namespace depthByY {
     * @param sprite the sprite to include
     * @param offset additional Z offset for fine-tuning
     */
+    //% weight = 80
     //% block="sort sprite $sprite by Y with offset $offset"
     //% block.loc.es="ordenar sprite $sprite por Y con $offset"
     export function addSpriteWithOffset(sprite: Sprite, offset: number) {
@@ -43,9 +46,10 @@ namespace depthByY {
     }
     
     /**
-        * Register a sprite and automatically calculate its offset based on the bottom of the hitbox
-        * @param sprite the sprite to sort
-        */
+    * Register a sprite and automatically calculate its offset based on the bottom of the hitbox
+    * @param sprite the sprite to sort
+    */
+    //% weight = 90
     //% block="sort sprite $sprite by bottom"
     //% block.loc.es="ordenar sprite $sprite por su base"
     export function addSpriteByBottom(sprite: Sprite) {
@@ -59,6 +63,7 @@ namespace depthByY {
     * @param sprite the sprite to update
     * @param offset new Z offset value
     */
+    //% weight = 70
     //% block="set Z offset of $sprite to $offset"
     //% block.loc.es="ajustar desplazamiento Z de $sprite a $offset"
     export function setZOffset(sprite: Sprite, offset: number) {
@@ -69,6 +74,7 @@ namespace depthByY {
     /**
     * Remove all registered sprites from sorting
     */
+    //% weight = 50
     //% block="clear sorted sprites"
     //% block.loc.es="limpiar sprites ordenados"
     export function clearSprites() {
