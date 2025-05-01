@@ -8,9 +8,7 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md",
-        "assets.json",
-        "tutorial-info-cache.json"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
