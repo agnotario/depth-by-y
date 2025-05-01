@@ -4,7 +4,6 @@ Automatically sort sprite layers in MakeCode Arcade based on their Y position to
 
 Ordena automáticamente los sprites en MakeCode Arcade según su posición Y para simular profundidad en juegos con vista cenital o isométrica.
 
----
 
 ![Demo](docs/demo.gif)
 
@@ -18,7 +17,6 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 - 🧹 Block to clear all registered sprites
 - 🧩 Fully block-based, MakeCode Arcade compatible
 
----
 
 ## 🎮 Use cases / Casos de uso
 
@@ -27,7 +25,6 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 - Characters walking behind/under buildings or trees
 - Decorative layers with depth control (e.g. shadows, effects)
 
----
 
 ## 🧱 Blocks / Bloques
 
@@ -45,19 +42,6 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 
 🛠 'Consejo:' Si tus sprites tienen tamaños diferentes o su caja de colisiones no está alineada al centro, considera usar "ordenar sprite por su base" para lograr una profundidad visual más precisa.
 
----
-
-## 📦 Installation / Instalación
-
-Paste the following URL into **Extensions** in MakeCode Arcade:
-
-Pega esta URL en **Extensiones** en MakeCode Arcade:
-
-```
-[https://github.com/agnotario/depthByY](https://github.com/agnotario/depth-by-y)
-```
-
----
 
 ## 🧪 Example / Ejemplo
 
@@ -90,13 +74,32 @@ depthByY.addSpriteWithOffset(tree, 5)
 - Útil cuando se utilizan tilemaps + sprites que se solapan.
 ---
 
+
 ## 📜 **License & Contributions**  
 Released under the **MIT License**, allowing free use and modification. Contributions are welcome—fork the repository and submit a pull request.  
 
 For issues or feedback, visit the [[issues]](https://github.com/agnotario/depth-by-y/issues) page.
 
----
 
-## 🙌 Credits
+## Use as Extension
 
-Made with ❤️ using [MakeCode Arcade](https://arcade.makecode.com/)
+This repository can be added as an **extension** in MakeCode.
+
+* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
+* click on **New Project**
+* click on **Extensions** under the gearwheel menu
+* search for **https://github.com/agnotario/prueba** and import
+
+## Edit this project
+
+To edit this repository in MakeCode.
+
+* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
+* click on **Import** then click on **Import URL**
+* paste **https://github.com/agnotario/prueba** and click import
+
+#### Metadata (used for search, rendering)
+
+* for PXT/arcade
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
