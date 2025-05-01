@@ -45,15 +45,7 @@ Ordena automáticamente los sprites en MakeCode Arcade según su posición Y par
 
 ## 🧪 Example / Ejemplo
 
-```ts
-let player = sprites.create(img`...`, SpriteKind.Player)
-let tree = sprites.create(img`...`, SpriteKind.Object)
-player.setPosition(80, 100)
-tree.setPosition(80, 60)
-
-depthByY.addSprite(player)
-depthByY.addSpriteWithOffset(tree, 5)
-```
+![Block1](docs/Example.png)
 
 💡 Now the player appears in front of or behind the tree depending on Y.
 
