@@ -1,6 +1,6 @@
 {
     "name": "Depth By Y",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "description": "Automatically sorts sprites by their Y position using z",
     "dependencies": {
         "device": "*"
